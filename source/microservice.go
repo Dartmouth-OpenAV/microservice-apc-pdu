@@ -11,6 +11,8 @@ func setFrameworkGlobals() {
 	framework.DefaultSocketPort = 23
 	framework.KeepAlive = true
 	framework.DisconnectAfterDoneRefreshing = true // or else device will close on timeout
+	framework.UseTelnet = false                    // default: false
+	framework.UseSSH = false                       // default: false
 
 	framework.RegisterMainGetFunc(doDeviceSpecificGet)
 	framework.RegisterMainSetFunc(doDeviceSpecificSet)
