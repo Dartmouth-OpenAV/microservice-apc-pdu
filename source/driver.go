@@ -81,8 +81,8 @@ func setState(socketKey string, num string, state string) (string, error) {
 
 // Reboots outlet or outlet range with a custom sleep duration
 // Note: if you want to use the reboot times set on the the device, use setState instead
-func rebootOutlet(socketKey string, num string, sleep string) (string, error) {
-	function := "rebootOutlet"
+func powerCycle(socketKey string, num string, sleep string) (string, error) {
+	function := "powerCycle"
 
 	sleep = strings.TrimSpace(sleep)
 	sleep = strings.Trim(sleep, `"'`)
