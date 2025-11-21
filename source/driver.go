@@ -242,7 +242,7 @@ func sendCommand(socketKey string, command string) (string, error) {
 			case 1:
 				return resultCache[0], nil
 			default:
-				return strings.Join(resultCache, "|"), nil
+				return strings.Join(resultCache, ", "), nil
 			}
 		case strings.HasPrefix(line, "E"): // device error code
 			return "", errors.New("Device returned error code: " + line)

@@ -37,7 +37,7 @@
 				"method": "GET",
 				"header": [],
 				"url": "http://{{microserviceURL}}/{{protocol}}|{{username}}:{{password}}@{{deviceIP}}:{{devicePort}}/alloutlets",
-				"description": "Gets the status of all outlets. Returns all outlet numbers, names and states delimited by pipe | per outlet."
+				"description": "Gets the status of all outlets. Returns all outlet numbers, names and states."
 			},
 			"response": []
 		}
