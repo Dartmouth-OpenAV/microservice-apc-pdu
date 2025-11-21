@@ -1,6 +1,6 @@
-# Linux dev script that removes any old container and rebuilds a new one with your changes
-# Run when you update the code and need to deploy a new test container
-# Use only for testing and development
+# Linux dev script for testing and development of the microservice.
+# This removes any old containers and rebuilds a new one with your changes.
+# Run when you update the code and need to deploy a new test container.
 
 # Find container (running or stopped) for this image
 container=$(sudo docker ps -aqf "ancestor=microservice-apc-pdu")
