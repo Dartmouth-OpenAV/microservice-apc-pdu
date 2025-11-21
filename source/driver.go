@@ -96,9 +96,20 @@ func powerCycle(socketKey string, num string, sleep string) (string, error) {
 		return "", errors.New(errMsg)
 	}
 
-	setState(socketKey, num, "off")
-	time.Sleep(time.Duration(intSleep) * time.Second)
-	return setState(socketKey, num, "on")
+	_, err = setState(socketKey, num, "off")
+	if err != nil {
+		return "", err
+	}
+
+	go func() {
+		time.Sleep(time.Duration(intSleep) * time.Second)
+		_, err := setState(socketKey, num, "on")
+		if err != nil {
+			framework.AddToErrors(socketKey, function+" - error turning outlet back on after reboot: "+err.Error())
+		}
+	}()
+
+	return "ok", nil
 }
 
 ///////////////////////////////////////////////////////////////////////////////
