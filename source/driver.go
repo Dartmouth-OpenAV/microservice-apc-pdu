@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mefranklin6/microservice-framework/framework"
+	"github.com/Dartmouth-OpenAV/microservice-framework/framework"
 )
 
 // Microservice for managing APC Switched Power Distribution Units (PDUs).

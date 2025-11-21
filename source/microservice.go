@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 
-	"github.com/mefranklin6/microservice-framework/framework"
+	"github.com/Dartmouth-OpenAV/microservice-framework/framework"
 )
 
 func setFrameworkGlobals() {
